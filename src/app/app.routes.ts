@@ -10,7 +10,7 @@ import { EmpresaIbmComponent } from './pages/empresa-ibm/empresa-ibm.component';
 import { BuscarEnfermeiraComponent } from './pages/buscar-enfermeira/buscar-enfermeira.component';
 
 export const routes: Routes = [
-    { path: 'home', component: HomeComponent },
+    { path: '', component: HomeComponent },
     { path: 'sobre', component: SobreComponent },
     { path: 'listar', component: ListarComponent },
     { path: 'ativos', component: BuscarAtivosComponent },
