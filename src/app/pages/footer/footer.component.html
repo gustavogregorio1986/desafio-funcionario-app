@@ -1,0 +1,39 @@
+<footer class="app-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h3>{{ config.name }}</h3>
+      <p>{{ config.role }}</p>
+    </div>
+
+    <nav class="footer-links">
+      <a routerLink="/sobre"><i class="fas fa-user"></i> Sobre</a>
+      <a routerLink="/projetos"><i class="fas fa-code"></i> Projetos</a>
+      <a routerLink="/contato"><i class="fas fa-envelope"></i> Contato</a>
+    </nav>
+
+    <div class="footer-contact">
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a [href]="'mailto:' + config.email">{{ config.email }}</a>
+      </p>
+      <p>
+        <i class="fab fa-whatsapp"></i>
+        <a [href]="whatsappLink" target="_blank">{{ config.whatsapp }}
+        </a>
+      </p>
+      <p>
+        <a [href]="config.linkedin" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        •
+        <a [href]="config.github" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-legal">
+    <p>© {{ config.year }}. Todos os direitos reservados. | <a routerLink="/privacidade">Política de Privacidade</a></p>
+  </div>
+</footer>
