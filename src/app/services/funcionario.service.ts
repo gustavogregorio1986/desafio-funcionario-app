@@ -8,5 +8,10 @@ export class FuncionarioService {
 
   private apiURL = 'https://localhost:7257/api/Funcionario';
 
-  constructor(http: HttpClient) { }
+  constructor(private http: HttpClient) { }
+  
+  adicionarFuncionario(funcionario: any) {
+     return this.http.post(`${this.apiURL}/adicionar-funcionario`, funcionario);
+  }
+  
 }
