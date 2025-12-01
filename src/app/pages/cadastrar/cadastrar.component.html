@@ -1,1 +1,101 @@
-<p>cadastrar works!</p>
+<div class="container py-5">
+  <div class="card border-0 shadow-lg">
+    <div class="card-header bg-gradient bg-primary text-white">
+      <h4 class="mb-0">
+        <i class="bi bi-person-plus-fill me-2"></i> Cadastro de Funcionário
+      </h4>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="formFuncionario" (ngSubmit)="salvar()" novalidate>
+        <div class="row g-4">
+          <!-- Nome -->
+          <div class="col-md-6">
+            <label for="nomeFuncionario" class="form-label fw-semibold">Nome</label>
+            <input id="nomeFuncionario" type="text" class="form-control" formControlName="nomeFuncionario" placeholder="Digite o nome completo">
+          </div>
+
+          <!-- Email -->
+          <div class="col-md-6">
+            <label for="emailFuncionario" class="form-label fw-semibold">Email</label>
+            <input id="emailFuncionario" type="email" class="form-control" formControlName="emailFuncionario" placeholder="exemplo@email.com">
+          </div>
+
+          <!-- CPF -->
+          <div class="col-md-6">
+            <label for="cpf" class="form-label fw-semibold">CPF</label>
+            <input id="cpf" type="text" class="form-control" formControlName="cpf" placeholder="000.000.000-00">
+          </div>
+
+          <!-- Celular -->
+          <div class="col-md-6">
+            <label for="celular" class="form-label fw-semibold">Celular</label>
+            <input id="celular" type="text" class="form-control" formControlName="celular" placeholder="(00) 00000-0000">
+          </div>
+
+          <!-- Email Corporativo -->
+          <div class="col-md-6">
+            <label for="emailComporativo" class="form-label fw-semibold">Email Corporativo</label>
+            <input id="emailComporativo" type="email" class="form-control" formControlName="emailComporativo" placeholder="nome@empresa.com">
+          </div>
+
+          <!-- Função -->
+          <div class="col-md-6">
+            <label for="funcao" class="form-label fw-semibold">Função</label>
+            <input id="funcao" type="text" class="form-control" formControlName="funcao" placeholder="Cargo ou função">
+          </div>
+
+          <!-- Datas -->
+          <div class="col-md-6">
+            <label for="datainicio" class="form-label fw-semibold">Data de Início</label>
+            <input id="datainicio" type="date" class="form-control" formControlName="datainicio">
+          </div>
+          <div class="col-md-6">
+            <label for="dateTermino" class="form-label fw-semibold">Data de Término</label>
+            <input id="dateTermino" type="date" class="form-control" formControlName="dateTermino">
+          </div>
+
+          <!-- Situação Empresa -->
+          <div class="col-md-6">
+            <label for="situacaoEmpresa" class="form-label fw-semibold">Situação da Empresa</label>
+            <select id="situacaoEmpresa" class="form-select" formControlName="situacaoEmpresa">
+              <option value="">Selecione...</option>
+              <option value="Trabalhando">Trabalhando</option>
+              <option value="Concluido">Concluído</option>
+            </select>
+          </div>
+
+          <!-- Situação -->
+          <div class="col-md-6">
+            <label for="situacao" class="form-label fw-semibold">Situação</label>
+            <select id="situacao" class="form-select" formControlName="situacao">
+              <option value="">Selecione...</option>
+              <option value="Ativo">Ativo</option>
+              <option value="Suspenso">Suspenso</option>
+            </select>
+          </div>
+
+          <!-- Salário -->
+          <div class="col-md-6">
+            <label for="salario" class="form-label fw-semibold">Salário</label>
+            <input id="salario" type="number" class="form-control" formControlName="salario" placeholder="R$ 0,00">
+          </div>
+
+          <!-- Empresa -->
+          <div class="col-md-6">
+            <label for="empresa" class="form-label fw-semibold">Empresa</label>
+            <input id="empresa" type="text" class="form-control" formControlName="empresa" placeholder="Nome da empresa">
+          </div>
+        </div>
+
+        <!-- Botão -->
+        <div class="mt-4 text-end">
+          <button type="submit" class="btn btn-success btn-lg px-5">
+            <i class="bi bi-check-circle me-2"></i> Salvar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<hr/>
+<app-footer></app-footer>

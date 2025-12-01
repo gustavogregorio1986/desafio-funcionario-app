@@ -8,10 +8,12 @@ import { BuscarConcluidosComponent } from './pages/buscar-concluidos/buscar-conc
 import { BuscarDesenvolvedorComponent } from './pages/buscar-desenvolvedor/buscar-desenvolvedor.component';
 import { EmpresaIbmComponent } from './pages/empresa-ibm/empresa-ibm.component';
 import { BuscarEnfermeiraComponent } from './pages/buscar-enfermeira/buscar-enfermeira.component';
+import { CadastrarComponent } from './pages/cadastrar/cadastrar.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'sobre', component: SobreComponent },
+    { path: 'cadastrar', component: CadastrarComponent },
     { path: 'listar', component: ListarComponent },
     { path: 'ativos', component: BuscarAtivosComponent },
     { path: 'inativos', component: BuscarInativasComponent },
